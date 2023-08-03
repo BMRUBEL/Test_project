@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+    :root{
+        --pink: #FF046F;
+        --violet:#c63BFA; 
+    }
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+
+}
+*::selection{
+    background:var(--pink);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+}
+
+
+
+
+.heading{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+.title{
+    padding: 0 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    color: #c63BFA;
+}
+
+
+
+
+header{
+    width:96%;
+    background: #fff;
+    position: fixed;
+    top: 2rem; left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: .2s;
+}
+
+.header-active{
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+header .navbar ul li{
+    margin: 0 1rem;
+}
+header .navbar ul li a{
+    font-size: 2rem;
+    color: var(--pink);
+    transition: .2s;
+
+}
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+    color: var(--violet);
+}
+header .logo{
+    font-size: 2.5rem;
+    color: var(--violet);
+    text-transform: uppercase;
+}
+header.logo i{
+    color:var(--pink);
+    padding: 0 .2rem;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: var(--pink);
+    cursor:pointer;
+    display: none;
+    transition: .2s;
+
+}
+
+.home{
+    min-height: 100vh;
+    background: url(../banner/banner-1.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+}
+.home .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-top: 14rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+.home .content h1{
+    font-size: 5rem;
+    color: #fff;
+    padding: 0 1rem;
+    text-shadow: 0 .3rem .5rem rgb(0,0,0,.3);
+    text-transform: uppercase;
+}
+.home .content p{
+    font-size: 3rem;
+    color:black;
+    padding: 1rem 25rem;
+}
+
+.home .content button{
+    height: 4rem;
+    width: 20rem;
+    border-radius: 5rem;
+    background: var(--pink);
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .2s;
+    border: none;
+    box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
+}
+.home .content button:hover{
+    letter-spacing: .2rem;
+}
+
+ 
+
+.about .row{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.about .row .image img{
+    height: 70vh;
+    width: 50vw;
+}
+
+
+.about .row .content{
+    padding-left: 5rem;
+}
+
+.about .row .content h3{
+    font-size:  3rem;
+    color: var(--pink);
+}
+.about .row .content p{
+    font-size:  1.6rem;
+    color: #c63BFA;
+    padding: 1rem 0;
+}
+.about .row .content button{
+    height: 3.5rem;
+    width: 17rem;
+    background: var(--violet);
+    color: #fff;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
+    cursor: pointer;
+    font-size: 2rem;
+    transition: .2s;
+}
+.about .row .content button:hover{
+    letter-spacing: .2rem;
+    opacity: .8;
+}
+
+.datails .heading{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.card{
+    width: 325px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+    transition: transform 0.4s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card .card-image{
+    width: 100%;
+}
+.card .card-image img{
+    width: 100%;
+    height: auto;
+}
+ .container .card .content h3{
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+ }
+ .container .card .content h4{
+    padding: 0;
+    font-size: 1rem;
+    text-align: center;
+    color: #c63BFA;
+ }
+ .container .card .content p{
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #FF046F;
+ }
+ .container .card .content .button{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5rem;
+      transition: 0.3s ease;
+
+ }
+ .container .card .content .button:hover{
+    background-color: #0056b3;
+ }
+
+
+header .fa-times{
+    transform: rotate(180deg);
+    color:var(--violet);
+
+}
+
+
+
+/* media querys */
+
+@media (max-width:768px){
+    html{
+        font-size: 55%
+    }
+
+  header .fa-bars{
+    display: block;
+  }
+  header .navbar{
+    position: fixed;
+    top: -100rem; left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: .2s linear;
+  }
+  header .navbar ul{
+    flex-flow: column;
+    padding: 2rem 0;
+  }
+  header .navbar ul li{
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  header .navbar ul li a{
+    font-size: 3rem;
+    display: block;
+  }
+  header .nav-toggle{
+    top: 5.5rem;
+    opacity: 1;
+  }
+
+  .about .row{
+    flex-flow: column-reverse;
+
+  }
+  .about .row .image img{
+    height: 60vh;
+    width:90 vw;
+  }
+  .about .row .content{
+    padding: 2.5rem;
+  }
+  
+  .body .cont .row{
+    flex-flow: column-reverse;
+  }
+  .body .cont .row .col p{
+    font-size: 1rem;
+    color: var(--pink);
+     
+
+  }
+   .body .cont .row .col h3{
+    font-size: 2rem;
+    color:red;
+   }
+  
+}
